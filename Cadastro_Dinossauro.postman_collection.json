@@ -74,7 +74,28 @@
 			"response": []
 		},
 		{
-			"name": "4. Atualizar Dinossauro (PUT)",
+			"name": "4. Buscar por Nome (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dinossauro/nome/Tiranossauro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dinossauro",
+						"nome",
+						"Tiranossauro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Atualizar Dinossauro (PUT)",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -103,7 +124,7 @@
 			"response": []
 		},
 		{
-			"name": "5. Deletar Dinossauro (DELETE)",
+			"name": "6. Deletar Dinossauro (DELETE)",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -117,6 +138,27 @@
 					"path": [
 						"dinossauro",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Deletar por Nome (DELETE)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dinossauro/nome/Tiranossauro Rex",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dinossauro",
+						"nome",
+						"Tiranossauro Rex"
 					]
 				}
 			},

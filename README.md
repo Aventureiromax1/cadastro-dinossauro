@@ -84,8 +84,14 @@ A aplicação iniciará na porta `8080`.
 ### 3. Buscar Dinossauro por ID (GET)
 - **URL:** `http://localhost:8080/dinossauro/1`
 - **Método:** `GET`
+- **Resposta Esperada:** `200 OK` (ou `404 Not Found` caso não exista)
 
-### 4. Atualizar Dinossauro (PUT)
+### 4. Buscar Dinossauro por Nome (GET)
+- **URL:** `http://localhost:8080/dinossauro/nome/Tiranossauro` (ou via query param: `http://localhost:8080/dinossauro?nome=Tiranossauro`)
+- **Método:** `GET`
+- **Resposta Esperada:** `200 OK` com os registros encontrados (ou `404 Not Found` caso nenhum seja encontrado na busca por path)
+
+### 5. Atualizar Dinossauro (PUT)
 - **URL:** `http://localhost:8080/dinossauro/1`
 - **Método:** `PUT`
 - **Header:** `Content-Type: application/json`
@@ -101,7 +107,12 @@ A aplicação iniciará na porta `8080`.
 }
 ```
 
-### 5. Excluir Dinossauro (DELETE)
+### 6. Excluir Dinossauro por ID (DELETE)
 - **URL:** `http://localhost:8080/dinossauro/1`
 - **Método:** `DELETE`
-- **Resposta Esperada:** `204 No Content`
+- **Resposta Esperada:** `204 No Content` (ou `404 Not Found` caso não exista)
+
+### 7. Excluir Dinossauro por Nome (DELETE)
+- **URL:** `http://localhost:8080/dinossauro/nome/Tiranossauro Rex`
+- **Método:** `DELETE`
+- **Resposta Esperada:** `204 No Content` (ou `404 Not Found` caso não exista)
